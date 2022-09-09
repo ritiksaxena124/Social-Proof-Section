@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "League Spartan", sans-serif;
+}
+body {
+  position: relative;
+  margin: 0;
+  min-height: 100vh;
+  z-index: 1;
+}
+body::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/bg-pattern-top-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  left: -40%;
+  top: 0;
+  z-index: -1;
+}
+
+
+body::after{
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/bg-pattern-bottom-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+z-index: 0;
+  bottom: 0;
+}
